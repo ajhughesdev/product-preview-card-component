@@ -28,40 +28,16 @@ article {
   margin: 1.75rem 1rem;
 }
 
-@media screen and (min-width: 630px) {
-  article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 28.125rem;
-    max-width: 37.5rem;
-    margin-block: 21.875vh;
-  }
-}
-
 .product-preview-image {
-  background-image: url(../images/image-product-mobile.jpg);
+  background-image: url("https://ajhughesdev.github.io/product-preview-card-component/images/image-product-mobile.jpg");
   background-size: cover;
   background-color: var(--white);
   height: 39.28%;
   border-radius: 0.625rem 0.625rem 0 0;
 }
 
-@media screen and (min-width: 630px) {
-  .product-preview-image {
-    height: 100%;
-    border-radius: 0.625rem 0 0 0.625rem;
-    background-image: url(../images/image-product-desktop.jpg);
-  }
-}
-
 .product-info {
   padding: 1.5rem;
-}
-
-@media screen and (min-width: 630px) {
-  .product-info {
-    padding: 2rem;
-  }
 }
 
 p,
@@ -103,12 +79,6 @@ h1 {
   margin-block: 0.75rem 1rem;
 }
 
-@media screen and (min-width: 630px) {
-  h1 {
-    margin-block: 1.25rem 1.5rem;
-  }
-}
-
 .sale-price {
   color: var(--dark-cyan);
 }
@@ -118,12 +88,6 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-}
-
-@media screen and (min-width: 630px) {
-  .pricing {
-    padding-block: 1.8125rem 1.875rem;
-  }
 }
 
 button {
@@ -139,18 +103,12 @@ button {
   max-height: 3rem;
 }
 
-@media screen and (min-width: 630px) {
-  button {
-    padding-inline: 3.875rem;
-  }
-}
-
 button:hover {
   background-color: hsl(157 43% 18%);
   cursor: pointer;
 }
 
-.attribution {
+footer {
   font-size: 11px;
   text-align: center;
   position: absolute;
@@ -158,6 +116,38 @@ button:hover {
   width: 100%;
 }
 
-.attribution a {
+footer a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 630px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 28.125rem;
+    max-width: 37.5rem;
+    margin-block: 21.875vh;
+  }
+
+  .product-preview-image {
+    height: 100%;
+    border-radius: 0.625rem 0 0 0.625rem;
+    background-image: url("https://ajhughesdev.github.io/product-preview-card-component/images/image-product-desktop.jpg");
+  }
+
+  .product-info {
+    padding: 2rem;
+  }
+
+  h1 {
+    margin-block: 1.25rem 1.5rem;
+  }
+
+  .pricing {
+    padding-block: 1.8125rem 1.875rem;
+  }
+
+  button {
+    padding-inline: 3.875rem;
+  }
 }
