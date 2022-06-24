@@ -13,16 +13,29 @@ html {
 }
 
 body {
-  display: grid;
+  display: flex;
   position: relative;
-  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 article {
-  min-height: calc(99.5vh - 3.5rem);
+  max-width: 21.4375rem;
+  height: 38.1875rem;
   background-color: var(--white);
-  border-radius: .625rem;
+  border-radius: 0.625rem;
   margin: 1.75rem 1rem;
+}
+
+@media screen and (min-width: 630px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 28.125rem;
+    max-width: 37.5rem;
+    margin-block: 21.875vh;
+  }
 }
 
 .product-preview-image {
@@ -30,11 +43,25 @@ article {
   background-size: cover;
   background-color: var(--white);
   height: 39.28%;
-  border-radius: .625rem .625rem 0 0;
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+
+@media screen and (min-width: 630px) {
+  .product-preview-image {
+    height: 100%;
+    border-radius: 0.625rem 0 0 0.625rem;
+    background-image: url(../images/image-product-desktop.jpg);
+  }
 }
 
 .product-info {
   padding: 1.5rem;
+}
+
+@media screen and (min-width: 630px) {
+  .product-info {
+    padding: 2rem;
+  }
 }
 
 p,
@@ -46,19 +73,19 @@ p,
 }
 
 .product-type {
-  font-size: .75rem;
+  font-size: 0.75rem;
   letter-spacing: 5px;
   text-transform: uppercase;
   line-height: calc(14.63 / 12);
 }
 
 p {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: calc(23 / 14);
 }
 
 .retail-price {
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   line-height: calc(23 / 13);
   text-decoration-line: line-through;
 }
@@ -73,7 +100,13 @@ h1,
 
 h1 {
   color: var(--very-dark-blue);
-  margin-block: .75rem 1rem;
+  margin-block: 0.75rem 1rem;
+}
+
+@media screen and (min-width: 630px) {
+  h1 {
+    margin-block: 1.25rem 1.5rem;
+  }
 }
 
 .sale-price {
@@ -87,16 +120,29 @@ h1 {
   gap: 1.5rem;
 }
 
+@media screen and (min-width: 630px) {
+  .pricing {
+    padding-block: 1.8125rem 1.875rem;
+  }
+}
+
 button {
   background-color: var(--dark-cyan);
   color: var(--white);
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   display: flex;
-  gap: .7256rem;
+  gap: 0.7256rem;
   padding: 1rem 5.75rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+  max-height: 3rem;
+}
+
+@media screen and (min-width: 630px) {
+  button {
+    padding-inline: 3.875rem;
+  }
 }
 
 button:hover {
