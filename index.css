@@ -70,7 +70,7 @@ h1,
 .sale-price {
   font-family: "Fraunces 72pt", serif;
   font-size: 2rem;
-  /* font-weight: 700; */
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -152,3 +152,4 @@ footer a {
     padding-inline: 3.875rem;
   }
 }
+
